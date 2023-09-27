@@ -1,0 +1,9 @@
+<?php
+
+$n = 330;
+
+$minut = floor($n / 3600) ;
+
+echo"Kun boshidan beri $minut  soat o'tdi" ;
+
+?>

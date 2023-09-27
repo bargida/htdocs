@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+h2{
+    color: red;
+    
+}
+form{
+    background-color: lightblue;
+}
+input{
+    border: 1px solid grey;
+    border-radius: 15px;
+    padding: 5px;
+}
+select{
+    border: 1px solid grey;
+    border-radius: 15px;
+    padding: 5px;
+}
+.btn{
+    background-color: coral;
+    padding: 10px;
+    border: 1px solid red;
+    border-radius: 20%;
+    color: white;
+}
