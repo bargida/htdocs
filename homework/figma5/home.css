@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+.cards{
+    margin: 80px;
+    display: grid;
+    background-color: aqua;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px;
+
+
+}
+.item1{
+    grid-column: span 2;
+}
+.item2{
+    grid-row: span 2;
+    background-color: yellow;
+}

@@ -1,6 +1,5 @@
 <!-- banner section start -->
 <div class="banner_section layout_padding">
-
          <div id="main_slider" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
                <div class="carousel-item active">
