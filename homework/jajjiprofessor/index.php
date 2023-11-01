@@ -5,7 +5,7 @@
         include $_GET["page"]."php" ;
     }
     else
-    include "home.php" ;
+        include "home.php" ;
  
     include "assets/footer.php" ; ?>
 
