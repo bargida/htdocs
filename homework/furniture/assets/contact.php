@@ -1,4 +1,7 @@
  <!-- contact section start -->
+      
+
+
  <div class="contact_section layout_padding">
          <div class="container">
             <div class="contact_section_2">
@@ -6,10 +9,10 @@
                   <div class="col-md-6">
                      <div class="mail_section_1">
                         <h1 class="contact_taital">Contact Us</h1>
-                        <input type="text" class="mail_text" placeholder="Name" name="text">
-                        <input type="text" class="mail_text" placeholder="Email" name="text">
-                        <input type="text" class="mail_text" placeholder="Phone Number" name="text">
-                        <textarea class="massage-bt" placeholder="Massage" rows="5" id="comment" name="Massage"></textarea>
+                        <input type="text" class="mail_text" placeholder="Name" name="fname">
+                        <input type="text" class="mail_text" placeholder="Email" name="email">
+                        <input type="text" class="mail_text" placeholder="Phone Number" name="phoneNumber">
+                        <textarea class="massage-bt" placeholder="Massage" rows="5" id="comment" name="massage"></textarea>
                         <div class="send_bt"><a href="#">SEND</a></div>
                      </div>
                   </div>
