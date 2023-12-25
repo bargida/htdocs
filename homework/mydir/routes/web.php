@@ -12,211 +12,118 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
 Route::get('/', function () {
     return view('welcome');
 });
 
-//************beginning of the integer part ************************
-Route::get('/data1/{m}', function ($m,){
-    $t = floor($m / 1000) ;
 
-    return $t ;
+Route::prefix('/support')->name('support')->group(function(){
+
+    Route::get('/admin', function () {
+            return view('support.admin');
+    }) ;
+    Route::get('/contact', function () {
+        return view('support.contact');
+    }) ;
+    Route::get('/database', function () {
+        return view('support.database');
+    }) ;
+    Route::get('/managers', function () {
+        return view('support.managers');
+    }) ;
+    Route::get('/page', function () {
+        return view('support.page');
+    }) ;
+    Route::get('/page2', function () {
+        return view('support.page2');
+    }) ;
+    Route::get('/service', function () {
+        return view('support.service');
+    }) ;
+
+    Route::get('/user', function () {
+        return view('support.user');
+    }) ;
+    Route::get('/user1', function () {
+        return view('support.user1');
+    }) ;
+    Route::get('/users', function () {
+        return view('support.users');
+    });
 });
 
-//***** integer 2 *************
-Route::get('/data2/{l}', function ($l,){
-    $d = floor($l / 100) ;
 
-    return $d ;
+
+Route::prefix('/products')->name('products')->group(function(){
+    Route::get('/brand', function () {
+        return view('products.brand');
+}) ;
+Route::get('/brand1', function () {
+    return view('products.brand1');
+}) ;
+Route::get('/brand2', function () {
+    return view('products.brand2');
+}) ;
+Route::get('/company', function () {
+    return view('products.company');
+}) ;
+Route::get('/company1', function () {
+    return view('products.company1');
+}) ;
+Route::get('/company2', function () {
+    return view('products.company2');
+}) ;
+Route::get('/model', function () {
+    return view('products.model');
+}) ;
+
+Route::get('/model1', function () {
+    return view('products.model1');
+}) ;
+Route::get('/model2', function () {
+    return view('products.model2');
+}) ;
+Route::get('/prices', function () {
+    return view('products.prices');
+    });
 });
 
-//***** integer 3 *************
-Route::get('/data3/{hajm}', function ($hajm,){
-   $kilobayt = floor($hajm / 1024) ;
-    return $kilobayt;
-});
-
-//***** integer 4 *************
-Route::get('/data4/{a}/{b}', function ($a, $b,){
-    $result = floor($a / $b );
- 
-     return $result;
- });
-
- //***** integer 5 *************
-Route::get('/data5/{a}/{b}', function ($a, $b,){
-    $d = $a % $b ;
- 
-     return "Joylashmagan qismi: $d ";
- });
-
- //***** integer 6 *************
-Route::get('/data6/{number}', function ($number,){
-    $num1 = floor($number / 10) ;
-
-    $birlik = $number % 10;
-
-    return "O'nliklar xonasidagi raqam: $num1 ga teng,<br> Birliklar xonasidagi raqam: $birlik ga teng" ;
- });
-
- //***** integer 7 *************
-Route::get('/data7/{num}', function ($num,){
-    $num1 = floor($num / 10) ;
-
-    $birlik = $num % 10;
-
-    $res = $num1 + $birlik ;
-    return "O'nliklar xonasi:$num1 ga teng <br> 
-    Birliklar xonasi: $birlik ga teng<br>
-    Raqamlar yig'indisi: $res ga teng" ;
-   
- });
-
- //***** integer 8 *************
-Route::get('/data9/{c}', function ($c,){
-
-    $number = floor($c / 10) ;
-
-    $birlik = $c % 10;
-
-    $d= $number ;
-
-    $number = $birlik;
 
 
-    $birlik = $d ;
- 
-     return "birinchi raqam $number ga teng: <br>
-     ikkinchi raqam  $birlik ga teng:";
- });
+Route::prefix('/technologies')->name('technologies')->group(function(){
+    Route::get('/camera', function () {
+        return view('technologies.camera');
+}) ;
+Route::get('/gadget1', function () {
+    return view('technologies.gadget1');
+}) ;
+Route::get('/gadget2', function () {
+    return view('technologies.gadget2');
+}) ;
+Route::get('/gadgets', function () {
+    return view('technologies.gadgets');
+}) ;
+Route::get('/iphone_brands', function () {
+    return view('technologies.iphone_brands');
+}) ;
+Route::get('/laptop_asus', function () {
+    return view('technologies.laptop_asus');
+}) ;
+Route::get('/laptop_hp', function () {
+    return view('technologies.laptop_hp');
+}) ;
 
- //***** integer 9 *************
-Route::get('/data9/{a}', function ($a,){
-
-    $result = floor($a / 100) ;
-    return "Yuzlar xonasidagi son: $result ga teng: " ;
- 
- });
-
- //***** integer 10 *************
-Route::get('/data10/{m}', function ($m,){
-
-    $num2 = floor($m / 10) ;
-
-    $num3 = $m % 10;
- 
-     return " O'nliklar xonasi:$num2 ga teng <br> 
-     Birliklar xonasi: $num3 ga teng";
- });
-//************beginning of the condition part ************************
-Route::get('/condition1/{b}', function ($b,){
-
-    $b = 0 ;
-
-    if($b > 0)
-        $b++;
-    else
-        $b ;
-    
-    return"$b" ;
-
-
-});
-
-//***** condition 2 *************
-Route::get('/condition2/{c}', function ($c,){
-    $c = 0 ;
-
-    if($c > 0)
-        $c++; 
-    elseif($c < 0)
-        $c = $c - 2 ;
-    return "$c";
-
-});
-
-//***** condition 3 *************
-Route::get('/condition3/{d}', function ($d,){
-    $d = 0 ;
-
-    if($d > 0) 
-        $d++; 
-    elseif($d < 0)
-        $d = $d - 2 ;
-
-    elseif($d == 0)
-        $d = 10;
-        return "$d";
-    
-});
-//************condition 4************************
-Route::get('/condition4/{a}/{b}/{c}', function ($a, $b, $c,){
-    $n = 0 ;
-
-    if ($a and $b > 0) 
-        $n++;
-    
-    elseif($a and $c > 0)
-        $n++;
-
-    elseif($b and $c > 0)
-        $n++;
-
-    return "Musbat sonlar soni: $n" ;
-    
-});
-
-//*************condition 6*********
-Route::get('/condition6/{num1}/{num2}', function ($num1, $num2,){
-    if($num1 > $num2) 
-        $max = $num1 ;
-    elseif($num1 < $num2)   
-        $max = $num2 ;
-    return "Eng katta son: $max " ;
-    
-});
-
-//*************condition 7*********
-Route::get('/condition7/{num1}/{num2}', function ($num1, $num2,){
-    if($num1 > $num2) 
-        $res = 2 ;
-    else
-        $res = 1 ; 
-    return "Eng kichigi: $res" ;
-
-    
-});
-
-//*************condition 8*********
-Route::get('/condition8/{num1}/num2,}', function ($num1, $num2,){
-    if($num1 > $num2){
-        $res1 = $num1 ;
-        $res2 = $num2 ;
-    }else{
-        $res1 = $num2 ;
-        $res2 = $num1 ;
-    }
-    return "$res1 <br> $res2" ;
-});
-
-//*************condition 9*********
-Route::get('/condition9/{a}/{b}', function ($a, $b,){
-    
-});
-
-//************condition 10************************
-Route::get('/condition10/{a}/{b}', function ($a, $b,){
-
-    if($a != $b) 
-        $c = ($a +$b) ;
-    elseif($a == $b)
-        $c = 0 ;
-    return "A : $a ga teng <br> B $b ga teng <br> Natija: $c" ;
-    
+Route::get('/laptop', function () {
+    return view('technologies.laptop');
+}) ;
+Route::get('/phone', function () {
+    return view('technologies.phone');
+}) ;
+Route::get('/smarttv', function () {
+    return view('technologies.smarttv');
+    });
 });
 
 
 ?>
 
- 
