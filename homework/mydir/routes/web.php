@@ -16,5 +16,10 @@ use Illuminate\Support\Facades\Route;
 */
 Route::get('/', [PagesController::class, 'index']);
 
+Route::get('/', [TestControllerr::class, 'index']);
+
+Route::post('form{count}', [PagesController::class, 'form']) ;
+Route::post('/forms', [PagesController::class, 'forms']) ;
+
 // ?>
 
