@@ -1,6 +1,6 @@
 <?php
 
-$weekdays = 12 ;
+$weekdays = 7 ;
 
 switch($weekdays) {
     case 1:
@@ -28,4 +28,4 @@ switch($weekdays) {
     default:
         $a =  "There isn't such as weekday" ;
     }
-echo "Today is : $a " ;
+        echo "Today is : $a " ;

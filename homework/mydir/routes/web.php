@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
-
-use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PagesController;
+use App\Http\Controllers\TestController ;
+use Illuminate\Support\Facades\Route ;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,12 +14,9 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::get('/', [PagesController::class, 'index']);
+// Route::get('/', [PagesController::class, 'index']) ;
 
-Route::get('/', [TestControllerr::class, 'index']);
-
-Route::post('form{count}', [PagesController::class, 'form']) ;
-Route::post('/forms', [PagesController::class, 'forms']) ;
-
-// ?>
-
+Route::get('/', function(){
+    return view('welcome');
+});
+// Route::post('/create', [PagesController::class, 'create']) ;

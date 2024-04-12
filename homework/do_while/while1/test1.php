@@ -1,13 +1,33 @@
 <?php
 
-$a = 49;
+$num = 1;
 
-$b = 5;
- do{
-    $a -= $b ;
+
+$odd = 0;
+$even = 0;
+
+
+do {
    
- }
+   if ($num % 2 == 0) {
+      echo $num . " is even\n";
+      $even++;
+    } 
+   else {
+      echo $num . " is odd\n";
+      $odd++;
+   }
+   $num++;
 
-while($a > $b) ;
-echo" $a <br> " ;
+} 
+while ($num <= 25);
+   $num_odd += $odd;
+   $num_even += $even;
+
+
+echo "Total odd : " . $odd_odd. "\n";
+echo "Total even : " . $even_even . "\n";
+
+
+
 ?>

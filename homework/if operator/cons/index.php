@@ -43,14 +43,17 @@
 //     $min = $res1;
 
 
+// $letter = "konjack" ;
+// $capitalized = ucfirst($letter)  ;
+// if ($capitalized <= 10**3)
+//     echo"$capitalized"; 
 
 
 
-
-
-
-
-
+$a = 5 ;
+$b = 3 ;
+$d = $a + $b ;
+echo "$d" ; 
 
 
 ?>

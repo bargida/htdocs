@@ -37,15 +37,15 @@
 
 //N5
 
-$a = 3;
+// $a = 3;
 
-$d = 4;
+// $d = 4;
 
-$n = 6;
+// $n = 6;
 
-$s = (2 * $a + $d) * ($n - 1) / 2 * $n;
+// $s = (2 * $a + $d) * ($n - 1) / 2 * $n;
 
-echo "Hadlar yig'indisi $s ga teng";
+// echo "Hadlar yig'indisi $s ga teng";
 
 //N6
 

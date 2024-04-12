@@ -8,8 +8,18 @@ h2{
     color: red;
     
 }
+.main{
+    background-color: blue;
+}
 form{
+    width: 100%;
+ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(209, 64, 64);
     background-color: lightblue;
+    height: 20px;
 }
 input{
     border: 1px solid grey;

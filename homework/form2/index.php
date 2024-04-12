@@ -1,95 +1,81 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <link rel="stylesheet" href="./style.css">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+
+    <!-- <link rel="stylesheet" href="style.css"> -->
     <title>My first PHP code</title>
 </head>
 <body>
-    <h2>FORM</h2><br>
-    <form action="app.php" method="POST">
-        <label for="fname"><b>Name: <b></label>
-        <input type="text" name="fname">  <br><br>
-
-        <label for="lname"><b>Surname: <b></label>
-        <input type="text" name="lname"> <br><br>
-
-        <label for="fullname" ><b>Otasining ismi: <b></label>
-        <input type="text" name="fullname"> <br><br>
-
-        <label for="birth"><b>Year: <b></label>
-        <input type="number" name="birth">  <br><br>
-
-        <label for="level">Choose your degree:</label>
-        <select id="level" name="level">
-            <option value="junior">junior</option>
-            <option value="middle">middle</option>
-            <option value="senior">senior</option>
-        </select> <br><br>
-
-        <label for="place"><b>Country: <b></label>
-        <input type="text" name="place">  <br><br>
-
-        <label for="city"><b>City: <b></label>
-        <input type="text" name="city">  <br><br>
+    <!-- <h2>FORM</h2><br>
+    <div class="main">
         
-        <br><br>
+    </div> -->
+    <div class="conatainer my-5">
+        <h1>List clients</h1>
+        <a href="create.php" class="btn btn-primary">New client</a>
+        <br>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Phone</th>
+                    <th>Address</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                $server="localhost";
+                $username="root";
+                $password="root";
+                $db="clients";
 
-        <label for="ism"><b>Name: <b></label>
-        <input type="text" name="ism">  <br><br>
+                $conn=new mysqli($server,$username,$password,$db);
 
-        <label for="familiya"><b>Surname: <b></label>
-        <input type="text" name="familiya"> <br><br>
+                if($conn->connect_error)
+                {
+                    die("connection failed".$conn->connect_error);
 
-        <label for="otchestva"><b>Otasining ismi: <b></label>
-        <input type="text" name="otchestva"> <br><br>
+                }
+                $sql="select * from users";
+                $result=$conn->query($sql);
 
-        <label for="year"><b>Year: <b></label>
-        <input type="number" name="year">  <br><br>
+                if(!$result)
+                {
+                    die("Invalid query".$conn->connect_error);
+                }
 
-        <label for="degree">Choose your degree:</label>
-        <select id="degree" name="degree">
-            <option value="bakalavr">bakalavr</option>
-            <option value="magistr">magistr</option>
-            <option value="dotsent">dotsent</option>
-        </select> <br><br>
+                while($row=$result->fetch_assoc())
+                {
+                    echo"
+                    <tr>
+                        <td>$row[id]</td>
+                        <td>$row[name]</td>
+                        <td>$row[phone]</td>
+                        <td>$row[address]</td>
+                        <td>
+                            <a class='btn btn-primary bn-sm' href='/login/edit.php?id=$row[id]'>Edit</a>
+                            <a class='btn btn-danger bn-sm' href='/login/delete.php?id=$row[id]'>Delete</a>
+                        </td>
+                    </tr>   ";
+                    
+                }
+                    
+                ?>
+            </tbody>
 
-        <label for="mamlakat"><b>Country: <b></label>
-        <input type="text" name="mamlakat">  <br><br>
+        </table>
+    </div>
+    
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
-        <label for="shahar"><b>City: <b></label>
-        <input type="text" name="shahar">  <br><br>
-        <br><br>
 
-        <label for="name"><b>Name: <b></label>
-        <input type="text" name="name">  <br><br>
-
-        <label for="surname"><b>Surname: <b></label>
-        <input type="text" name="surname"> <br><br>
-
-        <label for="otasining_ismi"><b>Otasining ismi: <b></label>
-        <input type="text" name="otasining_ismi"> <br><br>
-
-        <label for="birth_date"><b>Year: <b></label>
-        <input type="number" name="birth_date">  <br><br>
-
-        <label>Choose your degree:</label>
-        <select name="role">
-            <option value="phd">Phd</option>
-            <option value="content manager">Content Manager</option>
-            <option value="project manager">Project manager</option>
-        </select> <br><br>
-
-        <label for="country"><b>Country: <b></label>
-        <input type="text" name="country">  <br><br>
-
-        <label for="city_place"><b>City: <b></label>
-        <input type="text" name="city_place">  <br><br>
-
-        <input class="btn" type="submit" name="s1" value="SEND">
-
-    </form>
+    
 
 </body>
 </html>

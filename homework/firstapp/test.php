@@ -6,6 +6,7 @@ $surname = $_POST["surname"] ;
 $year = $_POST["year"];
 
 $age = 2023-$year ;
+mysqli
 
 
 

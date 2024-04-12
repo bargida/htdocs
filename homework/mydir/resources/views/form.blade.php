@@ -3,24 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
 <body>
-    <form action="/forms" method="post">
+    <h1>Hello</h1>
+    <!-- <form action="/create" method="post">
         @csrf
 
-    @for ($i = 1 ; $i <= $count; $i++)
+        @for ($i = 1 ; $i <= $count; $i++)
 
-    <input type="text" name="name1{{$i}}" placeholder="Name{{$i}}"><br><br>
-    <input type="number" name="price1{{$i}}" placeholder="Price{{$i}}"><br><br>
-    <input type="number" name="quantity1{{$i}}" placeholder="Quantity{{$i}}"><br><br>
+            <input type="text" name="name{{$i}}" placeholder="name{{$i}}"> <br>
+            <input type="number" name="quantity{{$i}}" placeholder="quantity{{$i}}"> <br>
+            <input type="number" name="price{{$i}}" placeholder="price{{$i}}"> <br> <br>
 
-    <input type="text" name="name2" placeholder="Name"><br><br>
-    <input type="number" name="price2" placeholder="Price"><br><br>
-    <input type="number" name="quantity2" placeholder="Quantity"><br><br>
+        @endfor
 
-    <input type="submit" value="send" name="s1">
-    </form>
+        <input type="submit" value="OK" name="s1">
+    </form> -->
+
 </body>
 </html>
-

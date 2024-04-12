@@ -1,25 +1,29 @@
 <?php
 
-$k = 1 ;
-
-switch($k) {
-    case 1 :
-        $result = "Yomon" ;
-        break ;
-    case 2 :
-        $result = "Qoniqarsiz" ;
-        break ; 
-    case 3 :
-        $result = "Qoniqarli" ;
-        break ; 
-    case 4 :
-        $result = "Yaxshi" ;
-        break ;
-    case 5 :
-        $result = "A'lo" ;
-        break ;
-    default :
-        $result = "Xato" ;
          
+
+$ch = [a. e, o];
+
+switch($ch) {
+    case a:
+        $a =  "vowel" ;
+        break ;
+    case e:
+        $a =  "vowel" ;
+        break ;
+    
+    case i:
+        $a =   "vowel" ;
+        break ;
+    case u:
+        $a =  "vowel" ;
+        break ;
+    case o:
+        $a = "vowel" ;
+        break ;
+   
+    default:
+        $a =  "Consonant" ;
+    }
+    echo "this letter is : $a "  ;
 }
-echo "Your grade : $result " ;

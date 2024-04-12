@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="search">
+            <input type="text" placeholder="Enter the city name" spellcheck="false">
+            <button><img src="img/search.png"></button>
+        </div>
+        <div class="weather">
+            <img src="img/sun.png" class="weather_icon" alt="There has some problem"><br>
+            <h1 class="temp" name="weather_temperature"></h1>
+            <h1 class="city"></h1><br>
+            <h1>Humidity of Basildon :</h1><br>
+            <h2 id="humidity" name="weather_humidity">Loading...</h2>
+        </div>
+    </div>
+    <script src="/script.js"></script>
+</body>
+</html>
